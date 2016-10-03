@@ -1,0 +1,627 @@
+1c1
+< ----/Users/snukavarapu/BBG/bbgconf/core-site.xml-------
+---
+> ----/Users/snukavarapu/BBG/ambconf/core-site.xml-------
+2a3,12
+> fs.trash.interval
+> ha.failover-controller.active-standby-elector.zk.op.retries
+> ha.zookeeper.quorum
+> hadoop.http.authentication.simple.anonymous.allowed
+> hadoop.proxyuser.HTTP.groups
+> hadoop.proxyuser.HTTP.hosts
+> hadoop.proxyuser.hcat.groups
+> hadoop.proxyuser.hcat.hosts
+> hadoop.proxyuser.hdfs.groups
+> hadoop.proxyuser.hdfs.hosts
+5,8d14
+< hadoop.proxyuser.httpfs.groups
+< hadoop.proxyuser.httpfs.hosts
+< hadoop.proxyuser.hue.groups
+< hadoop.proxyuser.hue.hosts
+10a17,18
+> hadoop.proxyuser.yarn.groups
+> hadoop.proxyuser.yarn.hosts
+14,15c22
+< hadoop.user.group.static.mapping.overrides
+< io.compression.codec.lzo.class
+---
+> hadoop.security.key.provider.path
+17,18c24,30
+< mapreduce.cluster.local.dir
+< mapreduce.framework.name
+---
+> io.file.buffer.size
+> io.serializations
+> ipc.client.connect.max.retries
+> ipc.client.connection.maxidletime
+> ipc.client.idlethreshold
+> ipc.server.tcpnodelay
+> mapreduce.jobtracker.webinterface.trusted
+20,23c32,33
+< yarn.nodemanager.linux-container-executor.group
+< yarn.nodemanager.log-dirs
+< ----/Users/snukavarapu/BBG/bbgconf/hbase-site.xml-------
+< dfs.client.read.shortcircuit
+---
+> ----/Users/snukavarapu/BBG/ambconf/hbase-site.xml-------
+> dfs.domain.socket.path
+24a35,37
+> hbase.client.keyvalue.maxsize
+> hbase.client.retries.number
+> hbase.client.scanner.caching
+26d38
+< hbase.coprocessor.abortonerror
+32,38c44,54
+< hbase.ipc.server.tcpnodelay
+< hbase.ipc.warn.response.size
+< hbase.ipc.warn.response.time
+< hbase.master.dns.interface
+< hbase.master.dns.nameserver
+< hbase.master.hostname
+< hbase.master.ipc.address
+---
+> hbase.hregion.majorcompaction.jitter
+> hbase.hregion.max.filesize
+> hbase.hregion.memstore.block.multiplier
+> hbase.hregion.memstore.flush.size
+> hbase.hregion.memstore.mslab.enabled
+> hbase.hstore.blockingStoreFiles
+> hbase.hstore.compaction.max
+> hbase.hstore.compactionThreshold
+> hbase.local.dir
+> hbase.master.info.bindAddress
+> hbase.master.info.port
+41,43c57,58
+< hbase.master.wait.on.regionservers.mintostart
+< hbase.region.server.rpc.scheduler.factory.class
+< hbase.regionserver.dns.interface
+---
+> hbase.master.port
+> hbase.regionserver.global.memstore.size
+45,46c60
+< hbase.regionserver.hostname
+< hbase.regionserver.ipc.address
+---
+> hbase.regionserver.info.port
+48a63
+> hbase.regionserver.port
+50d64
+< hbase.replication
+52,53c66,67
+< hbase.rpc.controllerfactory.class
+< hbase.rpc.engine
+---
+> hbase.rpc.protection
+> hbase.rpc.timeout
+56d69
+< hbase.security.exec.permission.checks
+57a71
+> hbase.tmp.dir
+60c74,79
+< ----/Users/snukavarapu/BBG/bbgconf/hdfs-site.xml-------
+---
+> hbase.zookeeper.useMulti
+> hfile.block.cache.size
+> phoenix.query.timeoutMs
+> zookeeper.session.timeout
+> zookeeper.znode.parent
+> ----/Users/snukavarapu/BBG/ambconf/hdfs-site.xml-------
+61a81
+> dfs.blockreport.initialDelay
+64,65d83
+< dfs.client.file-block-storage-locations.timeout
+< dfs.client.local.interfaces
+66a85,86
+> dfs.client.read.shortcircuit.streams.cache.size
+> dfs.client.retry.policy.enabled
+67a88,89
+> dfs.content-summary.limit
+> dfs.datanode.address
+69a92
+> dfs.datanode.data.dir.perm
+72c95,96
+< dfs.datanode.hdfs-blocks-metadata.enabled
+---
+> dfs.datanode.http.address
+> dfs.datanode.https.address
+77,78d100
+< dfs.datanode.sync.behind.writes
+< dfs.datanode.synconclose
+79a102,103
+> dfs.encrypt.data.transfer.cipher.suites
+> dfs.encryption.key.provider.uri
+82a107
+> dfs.heartbeat.interval
+83a109,110
+> dfs.http.policy
+> dfs.https.port
+90c117
+< dfs.journalnode.rpc-address
+---
+> dfs.namenode.accesstime.precision
+94c121,125
+< dfs.namenode.datanode.registration.ip-hostname-check
+---
+> dfs.namenode.checkpoint.dir
+> dfs.namenode.checkpoint.edits.dir
+> dfs.namenode.checkpoint.period
+> dfs.namenode.checkpoint.txns
+> dfs.namenode.fslock.fair
+96,99c127,130
+< dfs.namenode.http-address.Test-Laptop.namenode659806686
+< dfs.namenode.http-address.Test-Laptop.namenode661523378
+< dfs.namenode.https-address.Test-Laptop.namenode659806686
+< dfs.namenode.https-address.Test-Laptop.namenode661523378
+---
+> dfs.namenode.http-address.Test-Laptop.nn1
+> dfs.namenode.http-address.Test-Laptop.nn2
+> dfs.namenode.https-address.Test-Laptop.nn1
+> dfs.namenode.https-address.Test-Laptop.nn2
+104,105c135,138
+< dfs.namenode.rpc-address.Test-Laptop.namenode659806686
+< dfs.namenode.rpc-address.Test-Laptop.namenode661523378
+---
+> dfs.namenode.name.dir.restore
+> dfs.namenode.rpc-address.Test-Laptop.nn1
+> dfs.namenode.rpc-address.Test-Laptop.nn2
+> dfs.namenode.safemode.threshold-pct
+107a141,142
+> dfs.namenode.startup.delay.block.deletion.sec
+> dfs.namenode.write.stale.datanode.ratio
+112c147,148
+< dfs.secondary.namenode.kerberos.internal.spnego.principal
+---
+> dfs.replication.max
+> dfs.support.append
+116,117c152,158
+< ha.zookeeper.quorum
+< ----/Users/snukavarapu/BBG/bbgconf/hive-site.xml-------
+---
+> fs.permissions.umask-mode
+> nfs.exports.allowed.hosts
+> nfs.file.dump.dir
+> ----/Users/snukavarapu/BBG/ambconf/hive-site.xml-------
+> ambari.hive.db.schema.name
+> atlas.hook.hive.maxThreads
+> atlas.hook.hive.minThreads
+118a160
+> datanucleus.cache.level2.type
+120c162,204
+< hive.aux.jars.path
+---
+> hive.auto.convert.join
+> hive.auto.convert.join.noconditionaltask
+> hive.auto.convert.join.noconditionaltask.size
+> hive.auto.convert.sortmerge.join
+> hive.auto.convert.sortmerge.join.to.mapjoin
+> hive.cbo.enable
+> hive.cli.print.header
+> hive.cluster.delegation.token.store.class
+> hive.cluster.delegation.token.store.zookeeper.connectString
+> hive.cluster.delegation.token.store.zookeeper.znode
+> hive.compactor.abortedtxn.threshold
+> hive.compactor.check.interval
+> hive.compactor.delta.num.threshold
+> hive.compactor.delta.pct.threshold
+> hive.compactor.initiator.on
+> hive.compactor.worker.threads
+> hive.compactor.worker.timeout
+> hive.compute.query.using.stats
+> hive.conf.restricted.list
+> hive.convert.join.bucket.mapjoin.tez
+> hive.default.fileformat
+> hive.default.fileformat.managed
+> hive.enforce.bucketing
+> hive.enforce.sorting
+> hive.enforce.sortmergebucketmapjoin
+> hive.exec.compress.intermediate
+> hive.exec.compress.output
+> hive.exec.dynamic.partition
+> hive.exec.dynamic.partition.mode
+> hive.exec.failure.hooks
+> hive.exec.max.created.files
+> hive.exec.max.dynamic.partitions
+> hive.exec.max.dynamic.partitions.pernode
+> hive.exec.orc.compression.strategy
+> hive.exec.orc.default.compress
+> hive.exec.orc.default.stripe.size
+> hive.exec.orc.encoding.strategy
+> hive.exec.parallel
+> hive.exec.parallel.thread.number
+> hive.exec.post.hooks
+> hive.exec.pre.hooks
+> hive.exec.reducers.bytes.per.reducer
+> hive.exec.reducers.max
+121a206,230
+> hive.exec.submit.local.task.via.child
+> hive.exec.submitviachild
+> hive.execution.engine
+> hive.fetch.task.aggr
+> hive.fetch.task.conversion
+> hive.fetch.task.conversion.threshold
+> hive.limit.optimize.enable
+> hive.limit.pushdown.memory.usage
+> hive.map.aggr
+> hive.map.aggr.hash.force.flush.memory.threshold
+> hive.map.aggr.hash.min.reduction
+> hive.map.aggr.hash.percentmemory
+> hive.mapjoin.bucket.cache.size
+> hive.mapjoin.optimized.hashtable
+> hive.mapred.reduce.tasks.speculative.execution
+> hive.merge.mapfiles
+> hive.merge.mapredfiles
+> hive.merge.orcfile.stripe.level
+> hive.merge.rcfile.block.level
+> hive.merge.size.per.task
+> hive.merge.smallfiles.avgsize
+> hive.merge.tezfiles
+> hive.metastore.authorization.storage.checks
+> hive.metastore.cache.pinobjtypes
+> hive.metastore.client.connect.retry.delay
+122a232
+> hive.metastore.connect.retries
+123a234
+> hive.metastore.failure.retries
+125a237
+> hive.metastore.pre.event.listeners
+126a239
+> hive.metastore.server.max.threads
+128a242,261
+> hive.optimize.bucketmapjoin
+> hive.optimize.bucketmapjoin.sortedmerge
+> hive.optimize.constant.propagation
+> hive.optimize.index.filter
+> hive.optimize.metadataonly
+> hive.optimize.null.scan
+> hive.optimize.reducededuplication
+> hive.optimize.reducededuplication.min.reducer
+> hive.optimize.sort.dynamic.partition
+> hive.orc.compute.splits.num.threads
+> hive.orc.splits.include.file.footer
+> hive.prewarm.enabled
+> hive.prewarm.numcontainers
+> hive.security.authenticator.manager
+> hive.security.authorization.enabled
+> hive.security.authorization.manager
+> hive.security.metastore.authenticator.manager
+> hive.security.metastore.authorization.auth.reads
+> hive.security.metastore.authorization.manager
+> hive.server2.allow.user.substitution
+131a265,267
+> hive.server2.authentication.spnego.keytab
+> hive.server2.authentication.spnego.principal
+> hive.server2.enable.doAs
+134d269
+< hive.server2.logging.operation.verbose
+136c271,277
+< hive.server2.thrift.bind.host
+---
+> hive.server2.table.type.mapping
+> hive.server2.tez.default.queues
+> hive.server2.tez.initialize.default.sessions
+> hive.server2.tez.sessions.per.default.queue
+> hive.server2.thrift.http.path
+> hive.server2.thrift.http.port
+> hive.server2.thrift.max.worker.threads
+137a279,281
+> hive.server2.thrift.sasl.qop
+> hive.server2.transport.mode
+> hive.server2.use.SSL
+138a283
+> hive.smbjoin.cache.rows
+141,142c286,287
+< hive.stats.dbconnectionstring
+< hive.stats.jdbcdriver
+---
+> hive.stats.fetch.column.stats
+> hive.stats.fetch.partition.stats
+144c289,311
+< hive.warehouse.subdir.inherit.perms
+---
+> hive.tez.auto.reducer.parallelism
+> hive.tez.container.size
+> hive.tez.cpu.vcores
+> hive.tez.dynamic.partition.pruning
+> hive.tez.dynamic.partition.pruning.max.data.size
+> hive.tez.dynamic.partition.pruning.max.event.size
+> hive.tez.input.format
+> hive.tez.java.opts
+> hive.tez.log.level
+> hive.tez.max.partition.factor
+> hive.tez.min.partition.factor
+> hive.tez.smb.number.waves
+> hive.txn.manager
+> hive.txn.max.open.batch
+> hive.txn.timeout
+> hive.user.install.directory
+> hive.vectorized.execution.enabled
+> hive.vectorized.execution.reduce.enabled
+> hive.vectorized.groupby.checkinterval
+> hive.vectorized.groupby.flush.percent
+> hive.vectorized.groupby.maxentries
+> hive.zookeeper.client.port
+> hive.zookeeper.namespace
+147d313
+< javax.jdo.option.ConnectionPassword
+150,151c316
+< ----/Users/snukavarapu/BBG/bbgconf/mapred-site.xml-------
+< mapred.map.output.compress.codec
+---
+> ----/Users/snukavarapu/BBG/ambconf/mapred-site.xml-------
+152a318
+> mapreduce.admin.reduce.child.java.opts
+153a320
+> mapreduce.am.max-attempts
+155a323
+> mapreduce.cluster.administrators
+156a325,327
+> mapreduce.job.counters.max
+> mapreduce.job.emit-timeline-data
+> mapreduce.job.reduce.slowstart.completedmaps
+157a329,331
+> mapreduce.jobhistory.bind-host
+> mapreduce.jobhistory.done-dir
+> mapreduce.jobhistory.intermediate-done-dir
+159a334,336
+> mapreduce.jobhistory.recovery.enable
+> mapreduce.jobhistory.recovery.store.class
+> mapreduce.jobhistory.recovery.store.leveldb.path
+160a338,339
+> mapreduce.jobhistory.webapp.spnego-keytab-file
+> mapreduce.jobhistory.webapp.spnego-principal
+161a341
+> mapreduce.map.log.level
+163a344,348
+> mapreduce.map.sort.spill.percent
+> mapreduce.map.speculative
+> mapreduce.output.fileoutputformat.compress
+> mapreduce.output.fileoutputformat.compress.type
+> mapreduce.reduce.input.buffer.percent
+164a350
+> mapreduce.reduce.log.level
+165a352,363
+> mapreduce.reduce.shuffle.fetch.retry.enabled
+> mapreduce.reduce.shuffle.fetch.retry.interval-ms
+> mapreduce.reduce.shuffle.fetch.retry.timeout-ms
+> mapreduce.reduce.shuffle.input.buffer.percent
+> mapreduce.reduce.shuffle.merge.percent
+> mapreduce.reduce.shuffle.parallelcopies
+> mapreduce.reduce.speculative
+> mapreduce.shuffle.port
+> mapreduce.task.io.sort.factor
+> mapreduce.task.io.sort.mb
+> mapreduce.task.timeout
+> yarn.app.mapreduce.am.admin-command-opts
+170c368
+< ----/Users/snukavarapu/BBG/bbgconf/oozie-site.xml-------
+---
+> ----/Users/snukavarapu/BBG/ambconf/oozie-site.xml-------
+172d369
+< oozie.authentication.cookie.domain
+176d372
+< oozie.authentication.signature.secret
+178d373
+< oozie.authentication.token.validity
+179a375
+> oozie.base.url
+182,188c378
+< oozie.launcher.mapreduce.map.java.opts
+< oozie.launcher.mapreduce.map.memory.mb
+< oozie.launcher.mapreduce.reduce.java.opts
+< oozie.launcher.mapreduce.reduce.memory.mb
+< oozie.launcher.yarn.app.mapreduce.am.command-opts
+< oozie.launcher.yarn.app.mapreduce.am.resource.mb
+< oozie.service.ActionService.executor.ext.classes
+---
+> oozie.service.AuthorizationService.authorization.enabled
+190,192d379
+< oozie.service.CallableQueueService.callable.concurrency
+< oozie.service.CallableQueueService.queue.size
+< oozie.service.CallableQueueService.threads
+194d380
+< oozie.service.HadoopAccessorService.jobTracker.whitelist
+198,199d383
+< oozie.service.HadoopAccessorService.nameNode.whitelist
+< oozie.service.JPAService.create.db.schema
+204,215c388,390
+< oozie.service.JPAService.pool.max.active.conn
+< oozie.service.ProxyUserService.proxyuser.hue.groups
+< oozie.service.ProxyUserService.proxyuser.hue.hosts
+< oozie.service.PurgeService.older.than
+< oozie.service.PurgeService.purge.interval
+< oozie.service.SchemaService.wf.ext.schemas
+< oozie.service.WorkflowAppService.system.libpath
+< oozie.service.coord.normal.default.timeout
+< oozie.system.id
+< oozie.systemmode
+< use.system.libpath.for.mapreduce.and.pig.jobs
+< ----/Users/snukavarapu/BBG/bbgconf/sqoop-site.xml-------
+---
+> oozie.service.URIHandlerService.uri.handlers
+> oozie.services.ext
+> ----/Users/snukavarapu/BBG/ambconf/sqoop-site.xml-------
+226c401,408
+< ----/Users/snukavarapu/BBG/bbgconf/tez-site.xml-------
+---
+> ----/Users/snukavarapu/BBG/ambconf/tez-site.xml-------
+> tez.am.am-rm.heartbeat.interval-ms.max
+> tez.am.container.idle.release-timeout-max.millis
+> tez.am.container.idle.release-timeout-min.millis
+> tez.am.container.reuse.enabled
+> tez.am.container.reuse.locality.delay-allocation-millis
+> tez.am.container.reuse.non-local-fallback.enabled
+> tez.am.container.reuse.rack-fallback.enabled
+227a410,417
+> tez.am.launch.cmd-opts
+> tez.am.launch.env
+> tez.am.log.level
+> tez.am.max.app.attempts
+> tez.am.maxtaskfailures.per.node
+> tez.am.resource.memory.mb
+> tez.am.tez-ui.history-url.template
+> tez.am.view-acls
+228a419,425
+> tez.counters.max
+> tez.counters.max.groups
+> tez.generate.debug.artifacts
+> tez.grouping.max-size
+> tez.grouping.min-size
+> tez.grouping.split-waves
+> tez.history.logging.service.class
+229a427
+> tez.runtime.compress
+230a429,442
+> tez.runtime.convert.user-payload.to.history-text
+> tez.runtime.io.sort.mb
+> tez.runtime.optimize.local.fetch
+> tez.runtime.pipelined.sorter.sort.threads
+> tez.runtime.sorter.class
+> tez.runtime.unordered.output.buffer.size-mb
+> tez.session.am.dag.submit.timeout.secs
+> tez.session.client.timeout.secs
+> tez.shuffle-vertex-manager.max-src-fraction
+> tez.shuffle-vertex-manager.min-src-fraction
+> tez.staging-dir
+> tez.task.am.heartbeat.counter.interval-ms.max
+> tez.task.generate.counters.per.io
+> tez.task.get-task.sleep.interval-ms.max
+232c444,454
+< ----/Users/snukavarapu/BBG/bbgconf/yarn-site.xml-------
+---
+> tez.task.launch.cmd-opts
+> tez.task.launch.env
+> tez.task.max-events-per-heartbeat
+> tez.task.resource.memory.mb
+> tez.tez-ui.history-url.base
+> tez.use.cluster.hadoop-libs
+> ----/Users/snukavarapu/BBG/ambconf/yarn-site.xml-------
+> hadoop.registry.rm.enabled
+> hadoop.registry.zk.quorum
+> yarn.acl.enable
+> yarn.admin.acl
+233a456,458
+> yarn.client.nodemanager-connect.max-wait-ms
+> yarn.client.nodemanager-connect.retry-interval-ms
+> yarn.http.policy
+236a462,466
+> yarn.node-labels.enabled
+> yarn.node-labels.fs-store.retry-policy-spec
+> yarn.node-labels.fs-store.root-dir
+> yarn.nodemanager.address
+> yarn.nodemanager.admin-env
+238a469,470
+> yarn.nodemanager.aux-services.spark_shuffle.class
+> yarn.nodemanager.bind-host
+239a472,478
+> yarn.nodemanager.container-monitor.interval-ms
+> yarn.nodemanager.delete.debug-delay-sec
+> yarn.nodemanager.disk-health-checker.max-disk-utilization-per-disk-percentage
+> yarn.nodemanager.disk-health-checker.min-free-space-per-disk-mb
+> yarn.nodemanager.disk-health-checker.min-healthy-disks
+> yarn.nodemanager.health-checker.interval-ms
+> yarn.nodemanager.health-checker.script.timeout-ms
+240a480,481
+> yarn.nodemanager.linux-container-executor.cgroups.hierarchy
+> yarn.nodemanager.linux-container-executor.cgroups.mount
+241a483
+> yarn.nodemanager.linux-container-executor.cgroups.strict-resource-usage
+243d484
+< yarn.nodemanager.linux-container-executor.nonsecure-mode.limit-users
+246a488,489
+> yarn.nodemanager.log-aggregation.debug-enabled
+> yarn.nodemanager.log-aggregation.num-log-files-per-app
+248a492
+> yarn.nodemanager.log.retain-second
+249a494,495
+> yarn.nodemanager.recovery.dir
+> yarn.nodemanager.recovery.enabled
+250a497
+> yarn.nodemanager.remote-app-log-dir-suffix
+252a500
+> yarn.nodemanager.resource.percentage-physical-cpu-limit
+253a502,504
+> yarn.nodemanager.vmem-pmem-ratio
+> yarn.nodemanager.webapp.spnego-keytab-file
+> yarn.nodemanager.webapp.spnego-principal
+255a507,514
+> yarn.resourcemanager.am.max-attempts
+> yarn.resourcemanager.bind-host
+> yarn.resourcemanager.connect.max-wait.ms
+> yarn.resourcemanager.connect.retry-interval.ms
+> yarn.resourcemanager.fs.state-store.retry-policy-spec
+> yarn.resourcemanager.fs.state-store.uri
+> yarn.resourcemanager.ha.enabled
+> yarn.resourcemanager.hostname
+258a518,522
+> yarn.resourcemanager.proxy-user-privileges.enabled
+> yarn.resourcemanager.proxyusers.*.groups
+> yarn.resourcemanager.proxyusers.*.hosts
+> yarn.resourcemanager.proxyusers.*.users
+> yarn.resourcemanager.recovery.enabled
+261a526,530
+> yarn.resourcemanager.scheduler.monitor.enable
+> yarn.resourcemanager.state-store.max-completed-applications
+> yarn.resourcemanager.store.class
+> yarn.resourcemanager.system-metrics-publisher.dispatcher.pool-size
+> yarn.resourcemanager.system-metrics-publisher.enabled
+265c534,543
+< yarn.scheduler.fair.preemption
+---
+> yarn.resourcemanager.webapp.spnego-keytab-file
+> yarn.resourcemanager.webapp.spnego-principal
+> yarn.resourcemanager.work-preserving-recovery.enabled
+> yarn.resourcemanager.work-preserving-recovery.scheduling-wait-ms
+> yarn.resourcemanager.zk-acl
+> yarn.resourcemanager.zk-address
+> yarn.resourcemanager.zk-num-retries
+> yarn.resourcemanager.zk-retry-interval-ms
+> yarn.resourcemanager.zk-state-store.parent-path
+> yarn.resourcemanager.zk-timeout-ms
+266a545
+> yarn.scheduler.maximum-allocation-vcores
+267a547,549
+> yarn.scheduler.minimum-allocation-vcores
+> yarn.timeline-service.address
+> yarn.timeline-service.bind-host
+268a551,591
+> yarn.timeline-service.client.retry-interval-ms
+> yarn.timeline-service.enabled
+> yarn.timeline-service.entity-group-fs-store.active-dir
+> yarn.timeline-service.entity-group-fs-store.cleaner-interval-seconds
+> yarn.timeline-service.entity-group-fs-store.done-dir
+> yarn.timeline-service.entity-group-fs-store.group-id-plugin-classes
+> yarn.timeline-service.entity-group-fs-store.retain-seconds
+> yarn.timeline-service.entity-group-fs-store.scan-interval-seconds
+> yarn.timeline-service.entity-group-fs-store.summary-store
+> yarn.timeline-service.generic-application-history.store-class
+> yarn.timeline-service.http-authentication.cookie.domain
+> yarn.timeline-service.http-authentication.cookie.path
+> yarn.timeline-service.http-authentication.kerberos.keytab
+> yarn.timeline-service.http-authentication.kerberos.name.rules
+> yarn.timeline-service.http-authentication.kerberos.principal
+> yarn.timeline-service.http-authentication.proxyusers.*.groups
+> yarn.timeline-service.http-authentication.proxyusers.*.hosts
+> yarn.timeline-service.http-authentication.proxyusers.*.users
+> yarn.timeline-service.http-authentication.signature.secret
+> yarn.timeline-service.http-authentication.signature.secret.file
+> yarn.timeline-service.http-authentication.signer.secret.provider
+> yarn.timeline-service.http-authentication.signer.secret.provider.object
+> yarn.timeline-service.http-authentication.simple.anonymous.allowed
+> yarn.timeline-service.http-authentication.token.validity
+> yarn.timeline-service.http-authentication.type
+> yarn.timeline-service.keytab
+> yarn.timeline-service.leveldb-state-store.path
+> yarn.timeline-service.leveldb-timeline-store.path
+> yarn.timeline-service.leveldb-timeline-store.read-cache-size
+> yarn.timeline-service.leveldb-timeline-store.start-time-read-cache-size
+> yarn.timeline-service.leveldb-timeline-store.start-time-write-cache-size
+> yarn.timeline-service.leveldb-timeline-store.ttl-interval-ms
+> yarn.timeline-service.principal
+> yarn.timeline-service.recovery.enabled
+> yarn.timeline-service.state-store-class
+> yarn.timeline-service.store-class
+> yarn.timeline-service.ttl-enable
+> yarn.timeline-service.ttl-ms
+> yarn.timeline-service.version
+> yarn.timeline-service.webapp.address
+> yarn.timeline-service.webapp.https.address
